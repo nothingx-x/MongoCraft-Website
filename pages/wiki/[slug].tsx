@@ -6,6 +6,7 @@ import A from "@components/A";
 import { wikiPageDataGet, wikiPageDataGetAll } from "@lib/lib";
 import WikiMenu from "@components/WikiMenu";
 import { ArrowLeftIcon } from "@heroicons/react/20/solid";
+import { Suspense } from "react";
 
 export async function getStaticPaths() {
 	const paths = (await wikiPageDataGetAll()).map((page) => {
@@ -67,7 +68,9 @@ export default function WikiPage({
 					</div>
 				</section>
 				<hr />
-				<WikiContent />
+				<Suspense>
+					<WikiContent />
+				</Suspense>
 				<hr />
 			</article>
 		</div>

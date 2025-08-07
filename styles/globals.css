@@ -155,13 +155,16 @@
 		scale: 0;
 	}
 	.popup-close-button {
+		@apply bg-orange-500;
 		position: absolute;
 		top: -55%;
 		transform: translateY(50%);
 		right: 4%;
-		background-color: #ffa21d;
 		padding: 0.5rem 1rem;
 		border-radius: 4px;
+	}
+
+	.notification-bar.text {
 	}
 }
 

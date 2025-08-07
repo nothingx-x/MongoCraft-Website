@@ -9,6 +9,10 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			aspectRatio: {},
+			screens: {
+				"medium-phone": "375px"
+			},
 			fontFamily: {
 				sans: ["var(--font-atkinson-hyperlegible)"],
 				header: ["var(--font-inter)"],
