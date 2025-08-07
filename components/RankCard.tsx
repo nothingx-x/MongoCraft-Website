@@ -8,6 +8,7 @@ type RankCardProps = {
 	features: string[];
 	description: string;
 	price: number;
+	highlight?: boolean;
 };
 
 function RankCardPopup(props: RankCardProps) {
@@ -28,12 +29,13 @@ function RankCardPopup(props: RankCardProps) {
 				className="absolute top-0 right-[50%] translate-y-[-50%] translate-x-[50%]"
 			/>
 			<span className="text-lg font-bold">{props.name}</span>
+			<span className="mt-4">ویژگی ها:</span>
 			{props.features.map((feature, i) => (
-				<p key={i} className="">
+				<p key={i} className="mr-2 text-zinc-500">
 					{feature}
 				</p>
 			))}
-			<p>توضیحات: {props.description}</p>
+			<p className="mt-4">توضیحات: {props.description}</p>
 			<p>{props.price.toLocaleString()} تومان</p>
 			<button
 				className="px-3.5 py-2 bg-primary-500 focus:bg-primary-600 hover:bg-primary-700 text-secondary-100 ring-2 ring-primary-400 rounded-md text-base transition-all duration-300"
@@ -53,7 +55,10 @@ export function RankCard(props: RankCardProps) {
 		[triggerPopup]
 	);
 	return (
-		<div className="w-28 min-h-40 p-4 medium-phone:w-36 sm:w-72 md:w-80 rounded-md bg-zinc-200 border-2 border-primary-500 drop-shadow-sm shadow-md shadow-zinc-700 flex flex-col gap-2 relative justify-center items-center">
+		<div
+			className={`w-28 min-h-40 p-4 medium-phone:w-36 sm:w-72 md:w-80 rounded-md border-2 border-primary-500 drop-shadow-sm shadow-md shadow-zinc-700 flex flex-col gap-2 relative justify-center items-center ${
+				props.highlight ? "bg-primary-200" : "bg-zinc-200"
+			}`}>
 			<Image
 				src={props.icon}
 				alt={props.name}
