@@ -39,7 +39,7 @@ function NotificationBar({ notifications }: NotificationBarParams) {
 
 	return (
 		<nav
-			className={`z-50 sticky top-[7%] border-b border-red-400/0 select-none bg-red-500  backdrop-blur-md py-2 transition-all duration-300 ${
+			className={`z-50 sticky top-[7%] landscape:opacity-0 landscape:pointer-events-none border-b border-red-400/0 select-none bg-red-500  backdrop-blur-md py-2 transition-all duration-300 ${
 				hasScrolled ? "opacity-100" : "opacity-0 pointer-events-none"
 			}`}>
 			<div className="flex justify-center items-center content-width text-white text-base">
