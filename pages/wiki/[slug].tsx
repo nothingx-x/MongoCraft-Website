@@ -28,7 +28,9 @@ export default function WikiPage({
 	meta,
 	allData
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-	const content: Promise<typeof import("*.mdx")> = import(`../../wiki/${fileName}`);
+	const content: Promise<typeof import("*.mdx")> = import(
+		`../../wiki/${fileName}`
+	);
 	const WikiContent = dynamic(content);
 
 	return (
@@ -49,25 +51,24 @@ export default function WikiPage({
 			<article className="w-full markdown max-w-[100ch] mx-auto min-h-screen">
 				<section className="markdown">
 					<header className="text-4xl">{meta?.title || slug}</header>
-					{meta?.short ? <p className="text-lg text-zinc-300">{meta?.short}</p> : <></>}
+					{meta?.short ? (
+						<p className="text-lg text-zinc-300">{meta?.short}</p>
+					) : (
+						<></>
+					)}
 					<div className="block md:hidden">
 						<A
 							href="/wiki"
 							noIcon={true}
 							className="bg-zinc-800 group hover:bg-zinc-700 duration-150 text-zinc-300 py-2 px-6 rounded border border-zinc-700">
 							<ArrowLeftIcon className="w-5 h-5 inline-block align-middle" />
-							Back to Index
+							Back to Wiki
 						</A>
 					</div>
 				</section>
 				<hr />
 				<WikiContent />
 				<hr />
-				<A
-					className="custom-link inline"
-					href={`https://github.com/ProsperityMC/Prosperity-Website/blob/main/wiki/${fileName}`}>
-					Edit this page on GitHub
-				</A>
 			</article>
 		</div>
 	);

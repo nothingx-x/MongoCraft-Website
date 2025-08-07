@@ -27,10 +27,47 @@ const fontJetBrainsMono = JetBrains_Mono({
 
 export default function Layout(props: { children?: React.ReactNode }) {
 	return (
-		<div className={`${fontInter.variable} ${fontArchivo.variable} ${fontJetBrainsMono.variable}`}>
+		<div
+			className={`${fontInter.variable} ${fontArchivo.variable} ${fontJetBrainsMono.variable}`}>
 			<Menu />
-			<div className="pt-16 px-20 content-width min-h-[90vh]">{props.children}</div>
-			<Footer />
+			<div className="pt-16 px-20 content-width min-h-[90vh]">
+				{props.children}
+			</div>
+			<Footer
+				websiteName="Prosperity MC"
+				content={[
+					{
+						header: "Social",
+						links: [
+							{
+								text: "Discord",
+								href: "https://discord.gg/Gf5tDk5EhR"
+							},
+							{
+								text: "YouTube",
+								href: "https://youtube.com/@prosperitymc"
+							},
+							{
+								text: "Telegram",
+								href: "https://t.me/mongocraft"
+							}
+						]
+					},
+					{
+						header: "Resources",
+						links: [
+							{
+								text: "Site Source",
+								href: "https://github.com/ProsperityMC/Prosperity-Website"
+							},
+							{
+								text: "Live Map",
+								href: "https://map.prosperitymc.net"
+							}
+						]
+					}
+				]}
+			/>
 		</div>
 	);
 }

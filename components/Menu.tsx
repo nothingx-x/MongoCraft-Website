@@ -9,9 +9,7 @@ import A from "@components/A";
 export default function Menu() {
 	const links: { href: string; text: string; loose?: boolean }[] = [
 		{ href: "/", text: "Home" },
-		{ href: "/projects", text: "Projects", loose: true },
-		{ href: "/wiki", text: "Wiki", loose: true },
-		{ href: "https://map.prosperitymc.net", text: "Map" }
+		{ href: "/wiki", text: "Wiki", loose: true }
 	];
 	const [hasScrolled, setHasScrolled] = useState(false);
 
@@ -35,8 +33,14 @@ export default function Menu() {
 					<Link
 						href={"/"}
 						className="items-center hidden text-zinc-100 md:inline-flex shrink-0 font-bold font-header">
-						<Image className="inline-block w-7 h-7 rounded" src={logo} alt="" />
-						<header className="ml-4 hidden lg:block">Prosperity MC</header>
+						<Image
+							className="inline-block w-7 h-7 rounded"
+							src={logo}
+							alt=""
+						/>
+						<header className="ml-4 hidden lg:block">
+							Prosperity MC
+						</header>
 					</Link>
 					{links.map((link) => (
 						<A

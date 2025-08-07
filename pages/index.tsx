@@ -10,45 +10,52 @@ import A from "@components/A";
 import SchematicCard from "@components/SchematicCard";
 import InfoGrid from "@components/InfoGrid";
 import HighlightLinkBanner from "@components/HighlightLinkBanner";
+import { Testimonial } from "@components/Testimonial";
 
 export default function Home() {
-	const testimonials: { user: string; iconUrl: string; text: JSX.Element }[] = [
-		{
-			user: "Interplanetary",
-			text: (
-				<>
-					I joined Prosperity sometime in 2021. It was a super welcoming server with nice, helpful
-					people. It was the first TMC server I joined, and frankly, it set my expectations pretty
-					high :)
-				</>
-			),
-			iconUrl: "/index/users/interplanetary.webp"
-		},
-		{
-			user: "Andt",
-			text: (
-				<>
-					I've been playing on Prosperity for about a year now, and although the server had already
-					been up for quite a while longer, the amazing members of the server helped me get started
-					faster than I expected. They're great technical players and equally great builders, but
-					most of all, they are the best community I have ever seen in a Minecraft-Server, and I can
-					only recommend it.
-				</>
-			),
-			iconUrl: "/index/users/andt.webp"
-		},
-		{
-			user: "Takeout",
-			text: (
-				<>
-					I've played here for a bit now, it's a great place to call home. Some very knowledgeable
-					technical players as well as talented builders make for a motivating environment. I highly
-					encourage if you're looking to build redstone or not to check it out.
-				</>
-			),
-			iconUrl: "/index/users/takeout.webp"
-		}
-	];
+	const testimonials: { user: string; iconUrl: string; text: JSX.Element }[] =
+		[
+			{
+				user: "Interplanetary",
+				text: (
+					<>
+						I joined Prosperity sometime in 2021. It was a super
+						welcoming server with nice, helpful people. It was the
+						first TMC server I joined, and frankly, it set my
+						expectations pretty high :)
+					</>
+				),
+				iconUrl: "/index/users/interplanetary.webp"
+			},
+			{
+				user: "Andt",
+				text: (
+					<>
+						I've been playing on Prosperity for about a year now,
+						and although the server had already been up for quite a
+						while longer, the amazing members of the server helped
+						me get started faster than I expected. They're great
+						technical players and equally great builders, but most
+						of all, they are the best community I have ever seen in
+						a Minecraft-Server, and I can only recommend it.
+					</>
+				),
+				iconUrl: "/index/users/andt.webp"
+			},
+			{
+				user: "Takeout",
+				text: (
+					<>
+						I've played here for a bit now, it's a great place to
+						call home. Some very knowledgeable technical players as
+						well as talented builders make for a motivating
+						environment. I highly encourage if you're looking to
+						build redstone or not to check it out.
+					</>
+				),
+				iconUrl: "/index/users/takeout.webp"
+			}
+		];
 
 	return (
 		<>
@@ -77,10 +84,13 @@ export default function Home() {
 
 			<main id="main" className="markdown">
 				<section className="flex flex-col gap-10 text-center markdown my-52">
-					<header className="text-6xl type-header">Experience Minecraft Anew</header>
+					<header className="text-6xl type-header">
+						Experience Minecraft Anew
+					</header>
 					<p className="text-lg text-zinc-300 font-medium max-w-2xl mx-auto">
-						Prosperity is a modded Minecraft community founded on <H>looking beyond</H> the 
-						boundries of the game.  <H>Create</H>, <H>engineer</H>, and <H>grow</H> 
+						Prosperity is a modded Minecraft community founded on{" "}
+						<H>looking beyond</H> the boundries of the game.{" "}
+						<H>Create</H>, <H>engineer</H>, and <H>grow</H>
 						on a server you can call home.
 					</p>
 					<div className="space-x-12">
@@ -90,8 +100,11 @@ export default function Home() {
 								<ArrowRightIcon className="w-5 h-5 inline-block align-middle" />
 							</button>
 						</A>
-						<A href="/wiki/new-player-guide" className="hidden md:inline custom-link type-header">
-							New Player Guide <BookOpenIcon className="w-5 h-5 inline-block align-middle" />
+						<A
+							href="/wiki/new-player-guide"
+							className="hidden md:inline custom-link type-header">
+							New Player Guide{" "}
+							<BookOpenIcon className="w-5 h-5 inline-block align-middle" />
 						</A>
 					</div>
 				</section>
@@ -99,29 +112,49 @@ export default function Home() {
 				<hr id="builders" />
 
 				<section className="flex flex-col gap-10 text-center markdown my-20">
-					<header className="text-4xl type-header">A Playground For Architects</header>
+					<header className="text-4xl type-header">
+						A Playground For Architects
+					</header>
 					<p className="max-w-4xl mx-auto">
-						For those who wish to build, this is a great place to be. With no shortage of community
-						projects to contribute to, and a technical community giving you access to endless
-						resources, you can expand the scope of your builds further than ever before.
+						For those who wish to build, this is a great place to
+						be. With no shortage of community projects to contribute
+						to, and a technical community giving you access to
+						endless resources, you can expand the scope of your
+						builds further than ever before.
 					</p>
 					<InfoGrid
 						sections={[
 							<>
-								<H>A wider palette than ever.</H> With an extensive selection of decorative mods, a greater level of atmosphere, and more renewable resources than ever, you can build bigger and with more detail than you ever thought possible.
+								<H>A wider palette than ever.</H> With an
+								extensive selection of decorative mods, a
+								greater level of atmosphere, and more renewable
+								resources than ever, you can build bigger and
+								with more detail than you ever thought possible.
 							</>,
 							<>
-								<H>Work better together in survival and creative.</H> Take advantage of a powerful
-								creative server, real-time schematic syncing, and a cooperative community willing to
-								help with large scale builds.
+								<H>
+									Work better together in survival and
+									creative.
+								</H>{" "}
+								Take advantage of a powerful creative server,
+								real-time schematic syncing, and a cooperative
+								community willing to help with large scale
+								builds.
 							</>,
 							<>
-								<H>We do what Mojang won't.</H> Build with more detail thanks to vertical slabs, framed blocks, and many more highly-requested features that builders have desired for years.
+								<H>We do what Mojang won't.</H> Build with more
+								detail thanks to vertical slabs, framed blocks,
+								and many more highly-requested features that
+								builders have desired for years.
 							</>,
 							<>
-								<H>Building community.</H> With a strong community focus you don't need to worry
-								about griefing, trolls, or claims disrupting or ruining your hard work. Building is the lifeblood of our server and your work is appreciated.
-							</>,
+								<H>Building community.</H> With a strong
+								community focus you don't need to worry about
+								griefing, trolls, or claims disrupting or
+								ruining your hard work. Building is the
+								lifeblood of our server and your work is
+								appreciated.
+							</>
 						]}
 					/>
 					<Slideshow
@@ -147,7 +180,7 @@ export default function Home() {
 							}
 						]}
 					/>
-					<small className="mt-2">The builds shown are pre-2024 server reset.</small>
+
 					<HighlightLinkBanner
 						content="Explore more builds, farms, bases, and projects"
 						linkContent="Project Gallery"
@@ -155,111 +188,20 @@ export default function Home() {
 					/>
 				</section>
 
-				<hr className="technical" />
-
-				<section className="flex flex-col gap-10 text-center markdown my-20">
-					<header className="text-4xl type-header">Expanding The Minds of Engineers</header>
-					<p className="max-w-4xl mx-auto">
-						Technical gameplay is at the core of Prosperity, with the server focused heavily on
-						allowing experimentation and new ideas.
-					</p>
-					<InfoGrid
-						sections={[
-							<>
-								<H>Redstone without compromise.</H> Build what you want without worrying about
-								Redstone functionality being broken and limited. Make your farms, storage systems,
-								and machines on your terms.
-							</>,
-							<>
-								<H>Start strong.</H> Join an established server and skip the early game grind.
-								Prosperity already has existing infrastructure and <H>over 30 perimeters</H>.
-							</>,
-							<>
-								<H>Collaborate and learn.</H> Meet an existing community of dedicated and talented
-								Redstone engineers with wide ranging-expertise. Study our existing schematics and
-								huge creative test world.
-							</>,
-							<>
-								<H>Expand your ambitions.</H> Take advantage of our carefully thought out additions
-								to Redstone mechanics, farms, and quality-of-life additions. Build new farms for
-								sand, Elytra, sponges, and more.
-							</>
-						]}
-					/>
-					<HighlightLinkBanner
-						content="See what's new for technical players"
-						linkContent="Mechanics & Features"
-						href="/wiki/features"
-					/>
-
-					<div id="schematics" />
-
-					<header className="text-4xl type-header">Designed On Prosperity</header>
-					<p className="max-w-4xl mx-auto">Explore the tech created by our members.</p>
-					<div className="grid grid-cols-1 lg:grid-cols-3 transition-colors gap-8 w-full">
-						<SchematicCard
-							imageUrl="/index/schematics/8x-speed-trencher.png"
-							imageAlt=""
-							title="8x Speed Trencher"
-							content="A wicked fast trencher, in-part responsible for the huge number of perimeters on the
-							server."
-							credits={[{ userIconUrl: "/index/users/sg.webp", username: "Sg" }]}
-						/>
-						<SchematicCard
-							imageUrl="/index/schematics/void-trader.png"
-							imageAlt=""
-							title="Void Trading Hall"
-							content={
-								<>
-									A fast, highly performant, void trading hall. Utilizes{" "}
-									<A className="custom-link" href="/wiki/features#redstone">
-										chainstone
-									</A>{" "}
-									and auto-crafting.
-								</>
-							}
-							credits={[
-								{ userIconUrl: "/index/users/bothebot.webp", username: "BotheBot" },
-								{ userIconUrl: "/index/users/madpancho.webp", username: "Mad" },
-								{ userIconUrl: "/index/users/devil.webp", username: "Devil" },
-								{ userIconUrl: "/index/users/sg.webp", username: "Sg" }
-							]}
-						/>
-						<SchematicCard
-							imageUrl="/index/schematics/shulker-loader.png"
-							imageAlt=""
-							title="Fast Shulker Loader"
-							content={<>A fast and satisfying design for loading preset Shulker configurations.</>}
-							credits={[{ userIconUrl: "/index/users/index.webp", username: "Index" }]}
-						/>
-					</div>
-				</section>
-
 				<hr id="community" />
 
 				<section className="flex flex-col gap-10 text-center markdown my-20">
-					<header className="text-4xl type-header">By The Community, For The Community</header>
+					<header className="text-4xl type-header">
+						By The Community, For The Community
+					</header>
 					<p className="max-w-4xl mx-auto">
-						Prosperity is it's community. We take community feedback and suggestions to and strive
-						to create the best experience possible. See what our members think.
+						Prosperity is it's community. We take community feedback
+						and suggestions to and strive to create the best
+						experience possible. See what our members think.
 					</p>
 					<div className="columns-1 md:columns-2 lg:columns-3 gap-8 overflow-hidden">
 						{testimonials.map((comment, i) => (
-							<div
-								key={i}
-								className="break-inside-avoid-column border border-zinc-700 p-4 mb-4 rounded-md text-left">
-								<div className="flex gap-4 mb-1.5 items-center">
-									<Image
-										alt=""
-										src={comment?.iconUrl}
-										width={256}
-										height={256}
-										className="w-8 h-8 bg-zinc-800 rounded-full border-none"
-									/>
-									<header className="text-lg">{comment.user}</header>
-								</div>
-								{comment.text}
-							</div>
+							<Testimonial testimonial={comment} key={i} />
 						))}
 					</div>
 					<HighlightLinkBanner
@@ -269,44 +211,13 @@ export default function Home() {
 					/>
 				</section>
 
-				<hr id="performance" />
-
-				<section className="flex flex-col gap-10 text-center markdown my-20">
-					<header className="text-4xl type-header">A Commitment to Quality</header>
-					<p className="max-w-4xl mx-auto">
-						Key to both technical gameplay and quality-of-life, we take performance and reliability
-						seriously.
-					</p>
-					<InfoGrid
-						sections={[
-							<>
-								<H>A rock solid tickrate.</H> Enjoy consistent, solid, performance without worrying about game
-								breaking optimization plugins. Don't just run one world eater, run two, or
-								three!
-							</>,
-							<>
-								<H>Dedicated hardware.</H> Prosperity is hosted on dedicated high-end hardware from
-								a trustworthy host in Los Angeles, California.
-							</>,
-							<>
-								<H>Extensive backups and logging.</H> Don't worry about losing days of progress if
-								something goes wrong. We take full advantage of complete off-site backups and
-								verbose block logging.
-							</>,
-							<>
-								<H>Battle tested.</H> We only rely on the best mods and software, with
-								talented developers in the community to fix issues if they arise.
-							</>
-						]}
-					/>
-				</section>
-
 				<hr id="join" />
 
 				<section className="flex flex-col gap-10 text-center markdown my-36">
 					<header className="text-5xl">This is Prosperity</header>
 					<p className="text-lg text-zinc-300 font-medium max-w-2xl mx-auto">
-						Ready to join our community? Join our Discord and apply to be whitelisted now.
+						Ready to join our community? Join our Discord and apply
+						to be whitelisted now.
 					</p>
 					<div>
 						<A href="https://discord.gg/hfTxZ4XxYj" noIcon={true}>
@@ -316,7 +227,13 @@ export default function Home() {
 							</button>
 						</A>
 						<div className="mt-6 text-sm text-zinc-400 max-w-[50ch] mx-auto">
-							If you are a member of the server find joining information <A className="underline hover:no-underline" href="/wiki/join-info">here</A>
+							If you are a member of the server find joining
+							information{" "}
+							<A
+								className="underline hover:no-underline"
+								href="/wiki/join-info">
+								here
+							</A>
 						</div>
 					</div>
 				</section>

@@ -61,11 +61,6 @@ export default function Projects({
 						))
 					)}
 				</section>
-				<HighlightLinkBanner
-					content="Looking to add your creation to the project gallery?"
-					linkContent="Contribution Guide"
-					href="/wiki/wiki-contribution"
-				/>
 			</section>
 		</div>
 	);

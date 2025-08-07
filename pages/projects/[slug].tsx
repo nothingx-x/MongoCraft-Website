@@ -28,7 +28,9 @@ export default function ProjectPage({
 	meta,
 	imageFiles
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-	const content: Promise<typeof import("project/*.mdx")> = import(`../../projects/${fileName}`);
+	const content: Promise<typeof import("project/*.mdx")> = import(
+		`../../projects/${fileName}`
+	);
 	const ProjectContent = dynamic(content);
 
 	return (
@@ -60,25 +62,24 @@ export default function ProjectPage({
 			<article className="w-full markdown max-w-5xl mx-auto mb-20">
 				<section className="markdown">
 					<header className="text-4xl">{meta?.title || slug}</header>
-					{meta?.short ? <p className="text-lg text-zinc-300">{meta?.short}</p> : <></>}
+					{meta?.short ? (
+						<p className="text-lg text-zinc-300">{meta?.short}</p>
+					) : (
+						<></>
+					)}
 					<div className="block md:hidden">
 						<A
 							href="/projects"
 							noIcon={true}
 							className="bg-zinc-800 group hover:bg-zinc-700 duration-150 text-zinc-300 py-2 px-6 rounded border border-zinc-700">
 							<ArrowLeftIcon className="w-5 h-5 inline-block align-middle" />
-							Back to Index
+							Back to Gallery
 						</A>
 					</div>
 				</section>
 				<hr />
 				<ProjectContent />
 				<hr />
-				<A
-					className="custom-link inline"
-					href={`https://github.com/ProsperityMC/Prosperity-Website/blob/main/project/${fileName}`}>
-					Edit this page on GitHub
-				</A>
 			</article>
 		</div>
 	);
