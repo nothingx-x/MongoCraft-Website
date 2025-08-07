@@ -85,33 +85,32 @@ export default function Home() {
 			<main id="main" className="markdown">
 				<section className="flex flex-col gap-10 text-center markdown my-52">
 					<header className="text-6xl type-header">
-						Experience Minecraft Anew
+						به مونگو کرفت خوش اومدی
 					</header>
-					<p className="text-lg text-zinc-300 font-medium max-w-2xl mx-auto">
-						Prosperity is a modded Minecraft community founded on{" "}
-						<H>looking beyond</H> the boundries of the game.{" "}
-						<H>Create</H>, <H>engineer</H>, and <H>grow</H>
-						on a server you can call home.
+					<p className="text-lg text-zinc-900 font-medium max-w-2xl mx-auto">
+						به مونگو کرفت خیلی خوش اومدین.
+						<br />
+						مونگو کرفت یه سرور ماینکرفت هست که شما می تونید با بقیه
+						به صورت آنلاین ماینکرفت پلی بدید
 					</p>
-					<div className="space-x-12">
+					<div className="-space-x-12">
 						<A href="https://discord.gg/hfTxZ4XxYj" noIcon={true}>
-							<button className="bg-yellow-500 hover:bg-yellow-400 duration-150 text-zinc-900 px-14 py-2 type-header rounded justify-items-end">
-								Join The Server
+							<button className="bg-primary-500 hover:bg-primary-400 duration-150 text-primary-100 px-14 py-2 type-header rounded justify-items-end">
+								عضویت در سرور
 								<ArrowRightIcon className="w-5 h-5 inline-block align-middle" />
 							</button>
 						</A>
 						<A
 							href="/wiki/new-player-guide"
-							className="hidden md:inline custom-link type-header">
-							New Player Guide{" "}
+							className="hidden md:inline custom-link type-header pr-4">
+							آموزشات{" "}
 							<BookOpenIcon className="w-5 h-5 inline-block align-middle" />
 						</A>
 					</div>
 				</section>
 
-				<hr id="builders" />
-
-				<section className="flex flex-col gap-10 text-center markdown my-20">
+				<section className="flex flex-col gap-10 text-center markdown my-40">
+					<hr id="builders" />
 					<header className="text-4xl type-header">
 						A Playground For Architects
 					</header>
@@ -221,7 +220,7 @@ export default function Home() {
 					</p>
 					<div>
 						<A href="https://discord.gg/hfTxZ4XxYj" noIcon={true}>
-							<button className="bg-yellow-500 hover:bg-yellow-400 duration-150 text-zinc-900 px-14 py-2 type-header rounded justify-items-end">
+							<button className="bg-primary-500 hover:bg-primary-400 duration-150 text-zinc-900 px-14 py-2 type-header rounded justify-items-end">
 								Join The Server
 								<ArrowRightIcon className="w-5 h-5 inline-block align-middle" />
 							</button>

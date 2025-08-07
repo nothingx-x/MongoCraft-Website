@@ -49,7 +49,7 @@ export default function Slideshow(props: {
 			<div className="py-4 flex justify-center self-center">
 				<span className="flex gap-6">
 					<button
-						className="text-zinc-50 active:text-yellow-500 duration-200"
+						className="text-zinc-50 active:text-primary-500 duration-200"
 						onClick={() => advance("backward")}>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -64,10 +64,10 @@ export default function Slideshow(props: {
 						</svg>
 					</button>
 					<p className="text-sm text-zinc-300 self-center select-none">
-						{imageIndex + 1} of {props.images.length}
+						{imageIndex + 1} از {props.images.length}
 					</p>
 					<button
-						className="text-zinc-50 active:text-yellow-500 duration-200"
+						className="text-zinc-50 active:text-primary-500 duration-200"
 						onClick={() => advance("forward")}>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"

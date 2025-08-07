@@ -1,60 +1,54 @@
 /* eslint-disable camelcase */
-import { Inter } from "next/font/google";
-import { Archivo } from "next/font/google";
-import { JetBrains_Mono } from "next/font/google";
-
 import Menu from "@components/Menu";
 import Footer from "@components/Footer";
-
-const fontInter = Inter({
-	subsets: ["latin"],
-	variable: "--font-inter",
+import localFont from "next/font/local";
+const fontPixifa = localFont({
+	src: "../public/fonts/q_pixia.ttf",
 	preload: true
 });
-const fontArchivo = Archivo({
-	subsets: ["latin"],
-	variable: "--font-Archivo",
-	weight: ["400", "700"],
-	style: ["normal", "italic"],
+const fontBloxat = localFont({
+	src: "../public/fonts/Bloxat-PDoE.ttf",
 	preload: true
 });
-const fontJetBrainsMono = JetBrains_Mono({
-	subsets: ["latin"],
-	variable: "--font-jetbrains-mono",
-	weight: ["400"],
-	style: ["normal"]
-});
-
 export default function Layout(props: { children?: React.ReactNode }) {
 	return (
-		<div
-			className={`${fontInter.variable} ${fontArchivo.variable} ${fontJetBrainsMono.variable}`}>
-			<Menu />
+		<div className={`${fontPixifa.className}`} style={{ direction: "rtl" }}>
+			<Menu
+				props={{
+					header: "مونگو کرفت",
+					links: [
+						{ href: "/", text: "خانه" },
+						{ href: "/wiki", text: "آموزشات", loose: true },
+						{ href: "/wiki/faq", text: "سوالات", loose: true },
+						{ href: "/shop", text: "فروشگاه", highlight: true }
+					]
+				}}
+			/>
 			<div className="pt-16 px-20 content-width min-h-[90vh]">
 				{props.children}
 			</div>
 			<Footer
-				websiteName="Prosperity MC"
+				websiteName="مونگو کرفت"
 				content={[
 					{
-						header: "Social",
+						header: "اجتماعی",
 						links: [
 							{
-								text: "Discord",
+								text: "دیسکورد",
 								href: "https://discord.gg/Gf5tDk5EhR"
 							},
 							{
-								text: "YouTube",
+								text: "یوتیوب",
 								href: "https://youtube.com/@prosperitymc"
 							},
 							{
-								text: "Telegram",
+								text: "تلگرام",
 								href: "https://t.me/mongocraft"
 							}
 						]
 					},
 					{
-						header: "Resources",
+						header: "منابع",
 						links: [
 							{
 								text: "Site Source",

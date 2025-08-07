@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import logo from "@public/prosperity.svg";
+import logo from "@public/mongocraft.svg";
 import A from "@components/A";
 
 export default function Footer({
@@ -17,18 +17,18 @@ export default function Footer({
 	websiteName: string;
 }) {
 	return (
-		<nav className="border-t border-zinc-700 w-full select-none py-12 mt-16 text-sm bg-zinc-950/60 border-zinc-700/100 backdrop-blur-md">
+		<nav className="border-t border-secondary-700 w-full select-none py-12 mt-16 text-sm bg-secondary-500 border-secondary-700/100 backdrop-blur-md">
 			<div className="content-width flex justify-between gap-16">
 				<div className="flex flex-col gap-4">
 					<A
 						href={"/"}
 						className="items-center inline-flex overflow-hidden font-bold font-header">
 						<Image
-							className="inline-block w-7 h-7 mr-4 rounded"
+							className="inline-block w-7 h-7 ml-4 rounded"
 							src={logo}
 							alt=""
 						/>
-						<header className="hidden md:block">
+						<header className="hidden md:block text-primary-200">
 							{websiteName}
 						</header>
 					</A>
@@ -38,7 +38,7 @@ export default function Footer({
 						<div
 							key={entry.header}
 							className="flex flex-col whitespace-pre min-w-[6rem] gap-y-2">
-							<header className="type-sub-header text-xs text-zinc-400">
+							<header className="type-sub-header text-xs text-secondary-50">
 								{entry.header}
 							</header>
 							{entry.links.map((link) => (

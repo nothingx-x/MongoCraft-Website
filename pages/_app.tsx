@@ -6,6 +6,7 @@ import "@styles/globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Layout from "@components/Layout";
 import { Analytics } from "@vercel/analytics/react";
+import Popup, { PopupProvider } from "@components/Popup";
 
 export default function App({ Component, pageProps }: AppProps) {
 	const meta = {
@@ -16,9 +17,10 @@ export default function App({ Component, pageProps }: AppProps) {
 		"theme-color": "#fec11b"
 	};
 	return (
-		<Layout>
-			{/* prettier-ignore */}
-			<Head>
+		<PopupProvider>
+			<Layout>
+				{/* prettier-ignore */}
+				<Head>
 				<title>{meta.title}</title>
 				<meta property="og:title" content={meta.title} />
 				<meta property="twitter:title" content={meta.title} />
@@ -29,15 +31,16 @@ export default function App({ Component, pageProps }: AppProps) {
 				<meta
 					property="twitter:image"
 					content={meta.image}
-				/>
+					/>
 				<meta property="og:image:width" content="1200" />
 				<meta property="og:image:height" content="560" />
 				<meta name="theme-color" content={meta["theme-color"]} />
 			</Head>
-			<Analytics />
-			<SpeedInsights />
-
-			<Component {...pageProps} />
-		</Layout>
+				<Analytics />
+				<SpeedInsights />
+				<Component {...pageProps} />
+				<Popup />
+			</Layout>
+		</PopupProvider>
 	);
 }

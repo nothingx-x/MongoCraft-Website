@@ -53,14 +53,14 @@ export default function Wiki({
 						.map((page) => (
 							<A
 								href={`/wiki/${page.slug}`}
-								className="md:col-span-2 p-4 pb-6 block bg-gradient-to-bl from-yellow-500/30 to-zinc-800/30 hover:bg-yellow-500/20 text-left rounded-md duration-200 transform focus:border-yellow-400 border border-yellow-500 w-full">
+								className="md:col-span-2 p-4 pb-6 block bg-gradient-to-bl from-primary-500/30 to-zinc-800/30 hover:bg-primary-500/20 text-left rounded-md duration-200 transform focus:border-primary-400 border border-primary-500 w-full">
 								<div className="flex gap-2">
-									<SparklesIcon className="w-6 h-6 inline-block mt-2 text-yellow-500"></SparklesIcon>
-									<header className="text-lg type-header my-1.5 text-yellow-500">
+									<SparklesIcon className="w-6 h-6 inline-block mt-2 text-primary-500"></SparklesIcon>
+									<header className="text-lg type-header my-1.5 text-primary-500">
 										{page.meta?.title || page.slug}
 									</header>
 								</div>
-								<p className="mb-1.4 max-w-lg text-yellow-500">
+								<p className="mb-1.4 max-w-lg text-primary-500">
 									{page.meta?.short || ""}
 								</p>
 							</A>
@@ -74,7 +74,7 @@ export default function Wiki({
 						.map((page) => (
 							<A
 								href={`/wiki/${page.slug}`}
-								className="p-4 pb-6 hover:bg-zinc-900 text-left rounded-md duration-200 transform focus:border-yellow-400 bg-zinc-800 border border-zinc-700 w-full">
+								className="p-4 pb-6 hover:bg-secondary-200 text-left rounded-md duration-200 transform focus:border-primary-400 bg-zinc-100 border border-zinc-700 w-full">
 								<div className="flex gap-2">
 									<DocumentIcon className="w-6 h-6 inline-block mt-2"></DocumentIcon>
 									<header className="text-lg type-header my-1.5">
