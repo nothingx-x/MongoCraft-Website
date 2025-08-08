@@ -5,6 +5,7 @@ import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import logo from "@public/mongocraft.svg";
 import A from "@components/A";
 import { usePopup } from "./Popup";
+import ServerIpPopup from "./ServerIpPopup";
 
 type Link = {
 	href: string;
@@ -23,7 +24,7 @@ export default function Menu({ header, links }: MenuProps) {
 	const { triggerPopup } = usePopup();
 
 	const openPopup = useCallback(
-		() => triggerPopup("xxxxxxxxxxxxxx"),
+		() => triggerPopup(<ServerIpPopup ip="191.96.231.2" port={30495} />),
 		[triggerPopup]
 	);
 
@@ -42,7 +43,7 @@ export default function Menu({ header, links }: MenuProps) {
 		};
 	}, []);
 
-	console.log("re-rendered menu");
+	// console.log("re-rendered menu");
 	return (
 		<nav
 			className={`z-50 sticky top-0 border-b border-secondary-400/0 select-none duration-150 ${

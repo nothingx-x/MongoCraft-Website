@@ -10,11 +10,11 @@ import Popup, { PopupProvider } from "@components/Popup";
 
 export default function App({ Component, pageProps }: AppProps) {
 	const meta = {
-		"title": "Prosperity MC",
+		"title": "مونگو کرفت",
 		"description":
-			"Prosperity is a Minecraft community focused on high-level technical and building gameplay",
-		"image": "/_next/image?url=%2Fmeta%2Fdefault.png&w=1200&q=100",
-		"theme-color": "#fec11b"
+			"سلاممم.. به مونگو کرفت خیلی خوش اومدین. مونگو کرفت یه سرور ماینکرفت هست که شما می تونید با بقیه به صورت آنلاین ماینکرفت پلی بدید",
+		"image": "/_next/image?url=icon.png",
+		"theme-color": "#16a34a"
 	};
 	return (
 		<PopupProvider>

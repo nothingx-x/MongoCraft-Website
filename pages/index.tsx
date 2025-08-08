@@ -10,6 +10,7 @@ import A from "@components/A";
 import InfoGrid from "@components/InfoGrid";
 import { Testimonial } from "@components/Testimonial";
 import { usePopup } from "@components/Popup";
+import ServerIpPopup from "@components/ServerIpPopup";
 
 export default function Home() {
 	const testimonials: { user: string; iconUrl: string; text: JSX.Element }[] =
@@ -46,7 +47,7 @@ export default function Home() {
 	const { triggerPopup } = usePopup();
 
 	const openPopup = useCallback(
-		() => triggerPopup("xxxxxxxxxxxxxx"),
+		() => triggerPopup(<ServerIpPopup ip="191.96.231.2" port={30495} />),
 		[triggerPopup]
 	);
 
@@ -57,9 +58,12 @@ export default function Home() {
 				<title>مونگو کرفت</title>
 				<meta property="og:title" content="مونگو کرفت" />
 				<meta property="twitter:title" content="مونگو کرفت" />
-				<meta property="description" content="Prosperity is a Minecraft community focused on high-level technical and building gameplay, go beyond, build different" />
-				<meta property="og:description" content="Prosperity is a Minecraft community focused on high-level technical and building gameplay, go beyond, build different" />
-				<meta property="twitter:description" content="Prosperity is a Minecraft community focused on high-level technical and building gameplay, go beyond, build different" />
+				<meta property="description" content="سلاممم.. به مونگو کرفت خیلی خوش اومدین.
+مونگو کرفت یه سرور ماینکرفت هست که شما می تونید با بقیه به صورت آنلاین ماینکرفت پلی بدید" />
+				<meta property="og:description" content="سلاممم.. به مونگو کرفت خیلی خوش اومدین.
+مونگو کرفت یه سرور ماینکرفت هست که شما می تونید با بقیه به صورت آنلاین ماینکرفت پلی بدید" />
+				<meta property="twitter:description" content="سلاممم.. به مونگو کرفت خیلی خوش اومدین.
+مونگو کرفت یه سرور ماینکرفت هست که شما می تونید با بقیه به صورت آنلاین ماینکرفت پلی بدید" />
 				<meta property="og:image:width" content="1200" />
 				<meta property="og:image:height" content="560" />
 			</Head>

@@ -15,7 +15,7 @@ export default function WikiMenu(props: {
 							key={page.slug}
 							href={`${props.baseUrl}/${page.slug}`}
 							className="font-header font-medium"
-							activeClassName="text-white border-l-2 px-4 border-primary-500 hover:border-yellow-400 duration-150">
+							activeClassName="text-primary-400 border-l-2 px-4 border-primary-500 hover:border-yellow-400 duration-150">
 							{page.meta?.title || page.slug}
 						</A>
 					))}

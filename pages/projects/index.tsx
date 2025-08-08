@@ -19,9 +19,9 @@ export default function Projects({
 		<div className="markdown">
 			{/* prettier-ignore */}
 			<Head>
-				<title>Built On Prosperity</title>
-				<meta property="og:title" content="Built On Prosperity" />
-				<meta property="twitter:title" content="Built On Prosperity" />
+				<title>مونگو کرفت</title>
+				<meta property="og:title" content="مونگو کرفت" />
+				<meta property="twitter:title" content="مونگو کرفت" />
 				<meta name="description" content="Explore the builds, farms, and projects created on Prosperity" />
 				<meta name="og:description" content="Explore the builds, farms, and projects created on Prosperity" />
 				<meta name="twitter:description" content="Explore the builds, farms, and projects created on Prosperity" />
@@ -29,9 +29,7 @@ export default function Projects({
 
 			<section className="flex flex-col gap-10 text-center markdown">
 				<div className="markdown">
-					<header className="text-4xl type-header">
-						Built On Prosperity
-					</header>
+					<header className="text-4xl type-header">مونگو کرفت</header>
 					<p className="text-lg text-zinc-300 font-medium max-w-2xl mx-auto">
 						Explore the builds, farms, and projects created on
 						Prosperity.

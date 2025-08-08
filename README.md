@@ -1,10 +1,10 @@
-# Prosperity Website
+# MongoCraft Website
 
-This is the official website for the Prosperity Minecraft server and it's related projects. The site is mainly home to the server's wiki, landing page, and project gallery, with some future additions planned.
+This is the official website for the MongoCraft Minecraft server and it's related projects. The site is mainly home to the server's wiki, landing page, and project gallery, with some future additions planned.
 
 ---
 
-[Visit the site](https://prosperitymc.net) • [Discord server (contact)](https://discord.gg/Gf5tDk5EhR)
+[Visit the site](https://mongocraft.vercel.app)
 
 ## For Developers
 

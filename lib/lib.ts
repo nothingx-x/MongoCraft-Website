@@ -26,9 +26,15 @@ export async function wikiPageDataGetAll(): Promise<WikiData[]> {
 		const file = files[i];
 		const fileName = file.name;
 		const slug = fileName.replace(".mdx", "");
-		const content: typeof import("wiki/*.mdx") = await import(`../wiki/${fileName}`);
+		const content: typeof import("wiki/*.mdx") = await import(
+			`../wiki/${fileName}`
+		);
 
-		data.push({ slug: slug, fileName: fileName, meta: content.meta || null });
+		data.push({
+			slug: slug,
+			fileName: fileName,
+			meta: content.meta || null
+		});
 	}
 
 	return data;
@@ -36,7 +42,9 @@ export async function wikiPageDataGetAll(): Promise<WikiData[]> {
 
 export async function wikiPageDataGet(slug: string): Promise<WikiData> {
 	const fileName = `${slug}.mdx`;
-	const content: typeof import("wiki/*.mdx") = await import(`../wiki/${fileName}`);
+	const content: typeof import("wiki/*.mdx") = await import(
+		`../wiki/${fileName}`
+	);
 	const data = { slug: slug, fileName: fileName, meta: content.meta || null };
 
 	return data;
@@ -61,24 +69,32 @@ export async function projectPageDataGetAll(): Promise<ProjectData[]> {
 		recursive: true,
 		withFileTypes: true
 	});
-	const imageFiles = await readdir(path.join(process.cwd(), "public/projects"), {
-		recursive: true,
-		withFileTypes: true
-	});
+	const imageFiles = await readdir(
+		path.join(process.cwd(), "public/projects"),
+		{
+			recursive: true,
+			withFileTypes: true
+		}
+	);
 	const data: ProjectData[] = [];
 
 	for (let i = 0; i < files.length; i++) {
 		const file = files[i];
 		const fileName = file.name;
 		const slug = fileName.replace(".mdx", "");
-		const content: typeof import("project/*.mdx") = await import(`../projects/${fileName}`);
+		const content: typeof import("project/*.mdx") = await import(
+			`../projects/${fileName}`
+		);
 
 		data.push({
 			slug: slug,
 			fileName: fileName,
 			meta: content.meta || null,
 			imageFiles: imageFiles
-				.filter((image) => image.name.replace(/(_+.\.png)|(\.png)/, "") == slug)
+				.filter(
+					(image) =>
+						image.name.replace(/(_+.\.png)|(\.png)/, "") == slug
+				)
 				.map((file) => file.name)
 		});
 	}
@@ -88,18 +104,25 @@ export async function projectPageDataGetAll(): Promise<ProjectData[]> {
 
 export async function projectPageDataGet(slug: string): Promise<ProjectData> {
 	const fileName = `${slug}.mdx`;
-	const content: typeof import("project/*.mdx") = await import(`../projects/${fileName}`);
-	const imageFiles = await readdir(path.join(process.cwd(), "public/projects"), {
-		recursive: true,
-		withFileTypes: true
-	});
+	const content: typeof import("project/*.mdx") = await import(
+		`../projects/${fileName}`
+	);
+	const imageFiles = await readdir(
+		path.join(process.cwd(), "public/projects"),
+		{
+			recursive: true,
+			withFileTypes: true
+		}
+	);
 
 	const data = {
 		slug: slug,
 		fileName: fileName,
 		meta: content.meta || null,
 		imageFiles: imageFiles
-			.filter((image) => image.name.replace(/(_+.\.png)|(\.png)/, "") == slug)
+			.filter(
+				(image) => image.name.replace(/(_+.\.png)|(\.png)/, "") == slug
+			)
 			.map((file) => file.name)
 	};
 

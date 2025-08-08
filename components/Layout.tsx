@@ -41,11 +41,11 @@ export default function Layout(props: { children?: React.ReactNode }) {
 						links: [
 							{
 								text: "دیسکورد",
-								href: "https://discord.gg/Gf5tDk5EhR"
+								href: "https://discord.gg/tDqM9xAwBa"
 							},
 							{
 								text: "یوتیوب",
-								href: "https://youtube.com/@prosperitymc"
+								href: "https://youtube.com/channel/UC8t_CT8emtPKdJWZpeIq2jQ"
 							},
 							{
 								text: "تلگرام",
