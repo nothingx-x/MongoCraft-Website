@@ -20,7 +20,7 @@ export default function Wiki({
 		<div className="flex gap-8">
 			{/* prettier-ignore */}
 			<Head>
-				<title>Wiki</title>
+				<title>آموزشات</title>
 				<meta property="og:title" content="Wiki" />
 				<meta property="twitter:title" content="Wiki" />
 				<meta name="description" content="Directory of wiki pages" />
@@ -34,10 +34,8 @@ export default function Wiki({
 			<div className="flex flex-col gap-8 max-w-[100ch] mx-auto">
 				<article className="markdown">
 					<section className="markdown">
-						<header className="text-4xl">Index</header>
-						<p className="text-lg text-zinc-300">
-							Directory of wiki pages
-						</p>
+						<header className="text-4xl">آموزشات</header>
+						<p className="text-lg text-zinc-300">تمامی آموزشات</p>
 					</section>
 					<hr />
 					<Index />

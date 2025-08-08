@@ -54,9 +54,9 @@ export default function Home() {
 		<>
 			{/* prettier-ignore */}
 			<Head>
-				<title>This is Prosperity</title>
-				<meta property="og:title" content="This is Prosperity" />
-				<meta property="twitter:title" content="This is Prosperity" />
+				<title>مونگو کرفت</title>
+				<meta property="og:title" content="مونگو کرفت" />
+				<meta property="twitter:title" content="مونگو کرفت" />
 				<meta property="description" content="Prosperity is a Minecraft community focused on high-level technical and building gameplay, go beyond, build different" />
 				<meta property="og:description" content="Prosperity is a Minecraft community focused on high-level technical and building gameplay, go beyond, build different" />
 				<meta property="twitter:description" content="Prosperity is a Minecraft community focused on high-level technical and building gameplay, go beyond, build different" />

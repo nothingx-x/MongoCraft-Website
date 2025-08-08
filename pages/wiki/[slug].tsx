@@ -63,7 +63,7 @@ export default function WikiPage({
 							noIcon={true}
 							className="bg-zinc-800 group hover:bg-zinc-700 duration-150 text-zinc-300 py-2 px-6 rounded border border-zinc-700">
 							<ArrowLeftIcon className="w-5 h-5 inline-block align-middle" />
-							Back to Wiki
+							بازگشت به آموزشات
 						</A>
 					</div>
 				</section>

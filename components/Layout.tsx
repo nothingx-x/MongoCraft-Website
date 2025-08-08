@@ -24,7 +24,12 @@ export default function Layout(props: { children?: React.ReactNode }) {
 				]}
 			/>
 
-			<NotificationBar notifications={["یک اعلان", "اعلان بعدی"]} />
+			<NotificationBar
+				notifications={[
+					"به پایان فصل ششم رسیدیم",
+					"منابع بازیکنان به زودی ریست خواهد شد"
+				]}
+			/>
 			<div className="pt-16 px-20 content-width min-h-[90vh]">
 				{props.children}
 			</div>
