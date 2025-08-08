@@ -60,7 +60,10 @@ export default function Menu({ header, links }: MenuProps) {
 							src={logo}
 							alt=""
 						/>
-						<header className="mr-4 hidden lg:block">
+						<header
+							className={`mr-4 hidden lg:block ${
+								hasScrolled ? "text-white" : "text-zinc-900"
+							}`}>
 							{header}
 						</header>
 					</Link>

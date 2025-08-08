@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React, { useCallback, useState } from "react";
 import { usePopup } from "./Popup";
+import { useRouter } from "next/router";
 
 type RankCardProps = {
 	icon: string;
@@ -15,8 +16,13 @@ function RankCardPopup(props: RankCardProps) {
 	const [state, setState] = useState("rank-info");
 	const [checkRules, setCheckRules] = useState(false);
 
+	const router = useRouter();
 	const nextStep = () => {
-		setState("rules-info");
+		if (state == "rank-info") {
+			setState("rules-info");
+		} else {
+			router.push("https://reymit.ir/mongocraft");
+		}
 	};
 
 	return state == "rank-info" ? (
@@ -44,7 +50,32 @@ function RankCardPopup(props: RankCardProps) {
 			</button>
 		</div>
 	) : (
-		<div className="flex flex-col gap-2 justify-center items-center"></div>
+		<div className="flex flex-col gap-2 justify-center items-center max-w-80">
+			<p>
+				قبل از خرید هرگونه رنک این متن را با دقت بخوانید.
+				<br />
+				<br />
+				هرگونه رنک خریداری شده به هیچ عنوان پس گرفته نمی شود و شما با
+				رضایت و آگاهی رنک خریداری می کنید
+				<br />
+				<br />
+				شما با خرید رنک تایید می کنید که مزایای آن را در چنل تلگرام
+				خوانده اید و می دانید که چه رنکی می خواهید بخرید.
+				<br />
+				<br />
+				شما می دانید که برای خرید رنک باید اسم اکانت ماینکرفت + آیدی
+				تلگرامتون رو در توضیحات دونیت بنویسید.
+				<br />
+				<br />
+				شما تایید می کنید مبلغ کمتر از قیمت رنک به عنوان دونیت محسوب می
+				شود.
+			</p>
+			<button
+				className="px-3.5 py-2 bg-primary-500 focus:bg-primary-600 hover:bg-primary-700 text-secondary-100 ring-2 ring-primary-400 rounded-md text-base transition-all duration-300"
+				onClick={nextStep}>
+				خرید رنک {props.name} - {props.price.toLocaleString()} تومان
+			</button>
+		</div>
 	);
 }
 
@@ -67,11 +98,11 @@ export function RankCard(props: RankCardProps) {
 				className="absolute top-0 right-[50%] translate-y-[-50%] translate-x-[50%]"
 			/>
 			<span className="text-lg font-bold">{props.name}</span>
-			{props.features.map((feature, i) => (
-				<p key={i} className="hidden sm:block">
+			{/* {props.features.map((feature, i) => (
+				<p key={i} className="hidden">
 					{feature}
 				</p>
-			))}
+			))} */}
 			<p>توضیحات: {props.description}</p>
 			<p>{props.price.toLocaleString()} تومان</p>
 			<button

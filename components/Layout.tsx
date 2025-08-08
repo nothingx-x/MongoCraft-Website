@@ -45,19 +45,10 @@ export default function Layout(props: { children?: React.ReactNode }) {
 							{
 								text: "تلگرام",
 								href: "https://t.me/mongocraft"
-							}
-						]
-					},
-					{
-						header: "منابع",
-						links: [
-							{
-								text: "Site Source",
-								href: "https://github.com/ProsperityMC/Prosperity-Website"
 							},
 							{
-								text: "Live Map",
-								href: "https://map.prosperitymc.net"
+								text: "ایمیل",
+								href: "https://mongocraftir@gmail.com"
 							}
 						]
 					}

@@ -75,11 +75,11 @@
 	}
 
 	.markdown code {
-		@apply rounded border border-zinc-700 bg-zinc-800 px-1 py-0.5 text-sm;
+		@apply rounded border border-zinc-700 bg-primary-200 px-1 py-0.5 text-sm;
 	}
 
 	.markdown pre {
-		@apply rounded border border-zinc-700 bg-zinc-800 p-1.5;
+		@apply rounded border border-zinc-700 bg-primary-200 p-1.5;
 	}
 
 	.markdown pre > code {
