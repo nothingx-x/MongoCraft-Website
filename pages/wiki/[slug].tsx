@@ -5,8 +5,10 @@ import Head from "next/head";
 import A from "@components/A";
 import { wikiPageDataGet, wikiPageDataGetAll } from "@lib/lib";
 import WikiMenu from "@components/WikiMenu";
-import { ArrowLeftIcon } from "@heroicons/react/20/solid";
+import { ArrowLeftIcon, HeartIcon, ShareIcon } from "@heroicons/react/20/solid";
 import { Suspense } from "react";
+import { useRouter } from "next/router";
+import { usePopup } from "@components/Popup";
 
 export async function getStaticPaths() {
 	const paths = (await wikiPageDataGetAll()).map((page) => {
@@ -34,6 +36,15 @@ export default function WikiPage({
 	);
 	const WikiContent = dynamic(content);
 
+	const router = useRouter();
+	const popup = usePopup();
+
+	const sharePost = () => {
+		popup.triggerPopup(<p className="p-4">کپی شد!</p>);
+		navigator.clipboard.writeText(
+			"https://mongocraft.vercel.app" + router.asPath
+		);
+	};
 	return (
 		<div className="flex gap-8">
 			{/* prettier-ignore */}
@@ -46,9 +57,22 @@ export default function WikiPage({
 				<meta name="twitter:description" content={meta?.short || "A wiki page"} />
 			</Head>
 
-			<div className="hidden md:flex">
+			<div className="hidden md:flex md:flex-col md:gap-4 md:relative">
 				<WikiMenu pages={allData} baseUrl="/wiki" />
+				<div className="fixed translate-x-4 right-[0%] bottom-[0%] m-2 w-1/4 px-4 py-5 bg-primary-500 rounded-md flex justify-around">
+					<span>
+						<button onClick={sharePost}>
+							<ShareIcon className="w-7 h-7 inline-block align-middle text-primary-100 hover:text-primary-200 transition-all duration-300" />
+						</button>
+					</span>
+					<span>
+						<button>
+							<HeartIcon className="w-7 h-7 inline-block align-middle text-primary-100 hover:text-primary-200 transition-all duration-300" />
+						</button>
+					</span>
+				</div>
 			</div>
+
 			<article className="w-full markdown max-w-[100ch] mx-auto min-h-screen">
 				<section className="markdown">
 					<header className="text-4xl">{meta?.title || slug}</header>
