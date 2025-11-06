@@ -35,6 +35,7 @@ export default function App({ Component, pageProps }: AppProps) {
 				<meta property="og:image:width" content="1200" />
 				<meta property="og:image:height" content="560" />
 				<meta name="theme-color" content={meta["theme-color"]} />
+				<meta name="google-site-verification" content="FNrw1hCsTmBq9pBUGL35sdLtOv1djwpXRpushyQAs-A" />
 			</Head>
 				<Analytics />
 				<SpeedInsights />
