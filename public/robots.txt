@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://mongocraft.vercel.app
+
+# Sitemaps
+Sitemap: https://mongocraft.vercel.app/sitemap.xml
