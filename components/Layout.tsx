@@ -53,7 +53,7 @@ export default function Layout(props: { children?: React.ReactNode }) {
 							},
 							{
 								text: "ایمیل",
-								href: "https://mongocraftir@gmail.com"
+								href: "mailto:mongocraftir@gmail.com"
 							}
 						]
 					}
