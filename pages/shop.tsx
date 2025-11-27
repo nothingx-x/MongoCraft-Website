@@ -20,11 +20,11 @@ function page() {
 				"5000 کوین به صورت یکباره",
 				"شمشیر رعد وبرقی"
 			],
-			price: 50000,
+			price: 100000,
 			highlight: true
 		},
 		{
-			name: "ابیسور",
+			name: "کینورا",
 			icon: "/shop/ranks/abyssor_rank.png",
 			description: "یک عدد رنک ابیسور  برای یک ماه",
 			features: [
@@ -32,10 +32,10 @@ function page() {
 				"200% سود با فروش به فروشگاه",
 				"4000 کوین به صورت یکباره"
 			],
-			price: 45000
+			price: 80000
 		},
 		{
-			name: "کوانتیا",
+			name: "کاگویا",
 			icon: "/shop/ranks/quantia_rank.png",
 			description: "یک عدد رنک کوانتیا برای یک ماه",
 			features: [
@@ -43,15 +43,15 @@ function page() {
 				"150% سود با فروش به فروشگاه",
 				"3000 کوین به صورت یکباره"
 			],
-			price: 35000
+			price: 50000
 		},
 
 		{
-			name: "سولاریوم",
+			name: "هاروکا",
 			icon: "/shop/ranks/sularium_rank.png",
 			description: "یک عدد رنک سولاریوم برای یک ماه",
 			features: ["امکان داشتن خونه تا 5 عدد", "2000 کوین به صورت یکباره"],
-			price: 10000
+			price: 25000
 		}
 	];
 	return (

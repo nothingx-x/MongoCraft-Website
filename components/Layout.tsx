@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 import NotificationBar from "./NotificationBar";
 import Link from "next/link";
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
+import Bottombar from "./Bottombar";
 const fontPixifa = localFont({
 	src: "../public/fonts/q_pixia.ttf",
 	preload: true
@@ -65,6 +66,7 @@ export default function Layout(props: { children?: React.ReactNode }) {
 					}
 				]}
 			/>
+				<Bottombar header="منو" links={[]}/>
 		</div>
 	);
 }
