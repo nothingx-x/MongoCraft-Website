@@ -200,7 +200,7 @@ export default function Home() {
 					</p>
 					<div>
 						<button
-							className="bg-primary-500 hover:bg-primary-400 duration-150 text-zinc-900 px-14 py-2 type-header rounded justify-items-end"
+							className="bg-primary-500 hover:bg-primary-400 duration-150 text-zinc-100 px-14 py-2 type-header rounded justify-items-end"
 							onClick={openPopup}>
 							عضویت به سرور
 							<ArrowRightIcon className="w-5 h-5 inline-block align-middle" />

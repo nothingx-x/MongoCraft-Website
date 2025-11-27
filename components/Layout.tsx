@@ -3,6 +3,8 @@ import Menu from "@components/Menu";
 import Footer from "@components/Footer";
 import localFont from "next/font/local";
 import NotificationBar from "./NotificationBar";
+import Link from "next/link";
+import { ArrowRightIcon } from "@heroicons/react/20/solid";
 const fontPixifa = localFont({
 	src: "../public/fonts/q_pixia.ttf",
 	preload: true
@@ -14,6 +16,15 @@ const fontBloxat = localFont({
 export default function Layout(props: { children?: React.ReactNode }) {
 	return (
 		<div className={`${fontPixifa.className}`} style={{ direction: "rtl" }}>
+
+			<Link href="/mongocraft-v2">
+				<div className="backdrop-blur-sm w-full py-1.5 bg-red-500/75 hover:bg-red-500 duration-300">
+					<div className="content-width text-gray-900 font-medium text-center">
+						مونگو کرفت از تاریخ 4 آذر 1404 در حال بروزرسانی هست. بیشتر بخوانید
+						<ArrowRightIcon className="w-5 h-5 inline-block align-middle" />
+					</div>
+				</div>
+			</Link>
 			<Menu
 				header="مونگو کرفت"
 				links={[
@@ -24,12 +35,7 @@ export default function Layout(props: { children?: React.ReactNode }) {
 				]}
 			/>
 
-			<NotificationBar
-				notifications={[
-					"به پایان فصل ششم رسیدیم",
-					"منابع بازیکنان به زودی ریست خواهد شد"
-				]}
-			/>
+			
 			<div className="pt-16 px-20 content-width min-h-[90vh]">
 				{props.children}
 			</div>
@@ -41,11 +47,11 @@ export default function Layout(props: { children?: React.ReactNode }) {
 						links: [
 							{
 								text: "دیسکورد",
-								href: "https://discord.gg/tDqM9xAwBa"
+								href: "https://dsc.gg/mongo-craft"
 							},
 							{
 								text: "یوتیوب",
-								href: "https://youtube.com/channel/UC8t_CT8emtPKdJWZpeIq2jQ"
+								href: "https://www.youtube.com/@Mongo_Craft"
 							},
 							{
 								text: "تلگرام",

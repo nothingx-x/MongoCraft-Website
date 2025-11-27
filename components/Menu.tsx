@@ -46,7 +46,7 @@ export default function Menu({ header, links }: MenuProps) {
 	// console.log("re-rendered menu");
 	return (
 		<nav
-			className={`z-50 sticky top-0 border-b border-secondary-400/0 select-none duration-150 ${
+			className={`z-50 sticky top-0 border-b border-secondary-400/0 select-none duration-300 ${
 				hasScrolled
 					? "bg-secondary-500 border-secondary-400/100 backdrop-blur-md py-4 border-b"
 					: "py-4"
@@ -104,6 +104,7 @@ export default function Menu({ header, links }: MenuProps) {
 					</button>
 				</span>
 			</div>
+			
 		</nav>
 	);
 }
