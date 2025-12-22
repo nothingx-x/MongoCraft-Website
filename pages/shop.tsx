@@ -20,11 +20,11 @@ function page() {
 				"5000 کوین به صورت یکباره",
 				"شمشیر رعد وبرقی"
 			],
-			price: 100000,
+			price: 50000,
 			highlight: true
 		},
 		{
-			name: "کینورا",
+			name: "ابیسور",
 			icon: "/shop/ranks/abyssor_rank.png",
 			description: "یک عدد رنک ابیسور  برای یک ماه",
 			features: [
@@ -32,10 +32,10 @@ function page() {
 				"200% سود با فروش به فروشگاه",
 				"4000 کوین به صورت یکباره"
 			],
-			price: 80000
+			price: 45000
 		},
 		{
-			name: "کاگویا",
+			name: "کوانتیا",
 			icon: "/shop/ranks/quantia_rank.png",
 			description: "یک عدد رنک کوانتیا برای یک ماه",
 			features: [
@@ -43,31 +43,37 @@ function page() {
 				"150% سود با فروش به فروشگاه",
 				"3000 کوین به صورت یکباره"
 			],
-			price: 50000
+			price: 25000
 		},
 
 		{
-			name: "هاروکا",
+			name: "سولاریوم",
 			icon: "/shop/ranks/sularium_rank.png",
 			description: "یک عدد رنک سولاریوم برای یک ماه",
 			features: ["امکان داشتن خونه تا 5 عدد", "2000 کوین به صورت یکباره"],
-			price: 25000
+			price: 15000
 		}
 	];
 	return (
+		<>
+		<div className="flex items-center justify-center">
+			<h4 className="text-red-600">با توجه به خاموش بودن سرور خرید از فروشگاه غیرفعال است</h4>
+		</div>
 		<div className="min-h-screen grid grid-cols-2 gap-4 justify-center items-center justify-items-center">
 			{ranks.map((rank) => (
 				<RankCard
-					key={rank.name}
-					icon={rank.icon}
-					name={rank.name}
-					description={rank.description}
-					features={rank.features}
-					price={rank.price}
-					highlight={rank.highlight}
+				key={rank.name}
+				icon={rank.icon}
+				name={rank.name}
+				description={rank.description}
+				features={rank.features}
+				price={rank.price}
+				highlight={rank.highlight}
+				disabled={true}
 				/>
 			))}
 		</div>
+		</>
 	);
 }
 

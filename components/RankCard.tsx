@@ -10,6 +10,7 @@ type RankCardProps = {
 	description: string;
 	price: number;
 	highlight?: boolean;
+	disabled?: boolean;
 };
 
 function RankCardPopup(props: RankCardProps) {
@@ -107,8 +108,9 @@ export function RankCard(props: RankCardProps) {
 			<p>{props.price.toLocaleString()} تومان</p>
 			<button
 				className="px-3.5 py-2 bg-primary-500 focus:bg-primary-600 hover:bg-primary-700 text-secondary-100 ring-2 ring-primary-400 rounded-md text-base transition-all duration-300"
-				onClick={openPopup}>
-				خرید
+				onClick={openPopup}
+				disabled={props.disabled}>
+				خرید فعلا غیرفعال است
 			</button>
 		</div>
 	);
