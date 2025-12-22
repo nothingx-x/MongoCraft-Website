@@ -1,6 +1,7 @@
 import { usePopup } from "@components/Popup";
 import { useRouter } from "next/router";
 import { useState, useEffect, ReactNode } from "react";
+import { ISurveySubmission } from "types";
 
 interface ISurveyProps {
   currentStep: number;
@@ -216,17 +217,11 @@ function Form() {
       return;
     }
 
-    const surveyData: ISurveyMemberProps = {
-      name: userInfo.name,
-      currentStep: survey.currentStep,
-      totalFilledSteps: survey.totalFilledSteps,
-      steps: survey.steps,
-      createdAt: new Date(),
-    };
+    
 
     try {
       
-      console.log("داده‌های نظرسنجی:", surveyData);
+      
       setSubmitted(true);
       
       alert("نظرسنجی با موفقیت ثبت شد! سپاس از مشارکت شما 🙏");
@@ -236,6 +231,33 @@ function Form() {
       // setUserInfo({name: ""});
       // setSubmitted(false);
       CookieManager.markSurveyAsSubmitted();
+      const surveyData: ISurveySubmission = {
+      name: userInfo.name,
+      responses: survey.steps.map(step => ({
+        question: step.question,
+        options: step.options,
+        pickedOption: step.pickedOption
+      })),
+      surveyToken: CookieManager.getCookie("survey_token") || Math.random().toString(36).substring(2),
+      createdAt: new Date()
+    };
+
+    const response = await fetch("/api/survey", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(surveyData),
+    });
+
+    const result = await response.json();
+
+    if (!result.success) {
+        alert("خطا در ارسال نظرسنجی: " + result.message);
+        CookieManager.resetSurveyCookies();
+        return;
+    }
+
     } catch (error) {
       console.error("خطا در ارسال نظرسنجی:", error);
       alert("خطایی در ارسال نظرسنجی رخ داد. لطفا مجددا تلاش کنید.");
