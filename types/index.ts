@@ -1,10 +1,12 @@
+import Document from "next/document";
+
 export interface ISurveyResponse {
   question: string;
   options: string[];
   pickedOption?: number;
 }
 
-export interface ISurveySubmission {
+export interface ISurveySubmission extends Document{
   name: string;
   responses: ISurveyResponse[];
   ipAddress?: string;

@@ -1,11 +1,11 @@
-import { Mongoose } from 'mongoose';
+import mongoosedb from 'mongoose';
 
 
 declare global {
   
   let mongoose: {
-    conn: Mongoose | null;
-    promise: Promise<Mongoose> | null;
+    conn: typeof mongoosedb | null;
+    promise: Promise<typeof mongoosedb> | null;
   } | undefined;
 }
 

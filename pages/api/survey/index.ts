@@ -2,21 +2,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import mongoose from 'mongoose';
 import { ApiResponse, ISurveySubmission } from '../../../types';
 import dbConnect from '@lib/mongodb';
+import { Survey } from '@lib/models/Survey';
 
-const SurveySchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  responses: [{
-    question: String,
-    options: [String],
-    pickedOption: Number
-  }],
-  ipAddress: String,
-  userAgent: String,
-  surveyToken: { type: String, unique: true },
-  createdAt: { type: Date, default: Date.now }
-});
-
-const Survey = mongoose.models.Survey || mongoose.model('Survey', SurveySchema);
 
 
 

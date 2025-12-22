@@ -240,7 +240,7 @@ function Form() {
       })),
       surveyToken: CookieManager.getCookie("survey_token") || Math.random().toString(36).substring(2),
       createdAt: new Date()
-    };
+    } as any;
 
     const response = await fetch("/api/survey", {
         method: "POST",
