@@ -339,7 +339,7 @@ function Form() {
               <button
                 onClick={handlePrev}
                 disabled={survey.currentStep === 0}
-                className={`bg-primary-500 duration-150 text-primary-100 px-6 py-1 rounded justify-items-end ${
+                className={`duration-150 text-primary-100 px-6 py-1 rounded justify-items-end ${
                   survey.currentStep === 0
                     ? "bg-gray-100 text-gray-400 cursor-not-allowed"
                     : "bg-gray-400 text-gray-700 hover:bg-gray-500"
@@ -354,7 +354,7 @@ function Form() {
                   survey.currentStep === survey.steps.length - 1 ||
                   currentQuestion.pickedOption === undefined
                 }
-                className={`bg-primary-500 duration-150 text-primary-100 px-6 py-1 rounded justify-items-end ${
+                className={`duration-150 text-primary-100 px-6 py-1 rounded justify-items-end ${
                   survey.currentStep === survey.steps.length - 1 ||
                   currentQuestion.pickedOption === undefined
                     ? "bg-gray-100 text-gray-400 cursor-not-allowed"
@@ -369,7 +369,7 @@ function Form() {
               <button
                 onClick={handleSubmit}
                 disabled={currentQuestion.pickedOption === undefined}
-                className={`bg-primary-500 duration-150 text-primary-100 px-6 py-1 rounded justify-items-end ${
+                className={`duration-150 text-primary-100 px-6 py-1 rounded justify-items-end ${
                   currentQuestion.pickedOption === undefined
                     ? "bg-gray-100 text-gray-400 cursor-not-allowed"
                     : "bg-primary-500 text-zinc-900 hover:bg-primary-400 shadow-lg"
@@ -388,7 +388,7 @@ function Form() {
                   onClick={() => setSurvey({ ...survey, currentStep: index })}
                   className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${
                     index === survey.currentStep
-                      ? "bg-primary-600 text-white ring-2 ring-primary-300"
+                      ? "text-white ring-2 ring-primary-300"
                       : step.pickedOption !== undefined
                       ? "bg-green-100 text-green-700 border border-green-300"
                       : "bg-gray-100 text-gray-500 border border-gray-300"
