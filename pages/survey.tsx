@@ -388,7 +388,7 @@ function Form() {
                   onClick={() => setSurvey({ ...survey, currentStep: index })}
                   className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${
                     index === survey.currentStep
-                      ? "text-white ring-2 ring-primary-300"
+                      ? "bg-primary-600 text-white ring-2 ring-primary-300"
                       : step.pickedOption !== undefined
                       ? "bg-green-100 text-green-700 border border-green-300"
                       : "bg-gray-100 text-gray-500 border border-gray-300"
