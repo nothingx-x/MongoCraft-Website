@@ -2,6 +2,7 @@ import Image from "next/image";
 import React, { useCallback, useState } from "react";
 import { usePopup } from "./Popup";
 import { useRouter } from "next/router";
+import Button from "./Button";
 
 type RankCardProps = {
 	icon: string;
@@ -106,12 +107,13 @@ export function RankCard(props: RankCardProps) {
 			))} */}
 			<p>توضیحات: {props.description}</p>
 			<p>{props.price.toLocaleString()} تومان</p>
-			<button
-				className="px-3.5 py-2 bg-primary-500 focus:bg-primary-600 hover:bg-primary-700 text-secondary-100 ring-2 ring-primary-400 rounded-md text-base transition-all duration-300"
+			<Button
+				className="px-3.5 py-2 ring-2 ring-primary-400 text-base transition-all duration-300"
+				variant="secondary"
 				onClick={openPopup}
 				disabled={props.disabled}>
 				خرید فعلا غیرفعال است
-			</button>
+			</Button>
 		</div>
 	);
 }

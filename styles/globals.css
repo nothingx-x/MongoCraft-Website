@@ -5,7 +5,7 @@
 @layer base {
 	html {
 		font-family: "Archivo", Arial, Helvetica, sans-serif;
-		@apply bg-secondary-50 text-zinc-900 scroll-smooth selection:bg-fuchsia-400/30 text-pretty;
+		@apply bg-secondary-50 text-zinc-900 scroll-smooth selection:bg-primary-400/30 text-pretty;
 	}
 
 	header {

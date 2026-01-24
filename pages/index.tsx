@@ -11,6 +11,7 @@ import InfoGrid from "@components/InfoGrid";
 import { Testimonial } from "@components/Testimonial";
 import { usePopup } from "@components/Popup";
 import ServerIpPopup from "@components/ServerIpPopup";
+import Button from "@components/Button";
 
 export default function Home() {
 	const testimonials: { user: string; iconUrl: string; text: JSX.Element }[] =
@@ -91,12 +92,13 @@ export default function Home() {
 						به صورت آنلاین ماینکرفت پلی بدید
 					</p>
 					<div className="-space-x-12">
-						<button
-							className="bg-primary-500 hover:bg-primary-400 duration-150 text-primary-100 px-14 py-2 type-header rounded justify-items-end"
+						<Button
+							className="px-14 py-2 type-header rounded justify-items-end"
+							variant="primary"
 							onClick={openPopup}>
 							عضویت در سرور
 							<ArrowRightIcon className="w-5 h-5 inline-block align-middle" />
-						</button>
+						</Button>
 
 						<A
 							href="/wiki/new-player-guide"

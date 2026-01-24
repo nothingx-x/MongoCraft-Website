@@ -1,3 +1,4 @@
+import Button from "@components/Button";
 import { usePopup } from "@components/Popup";
 import { useRouter } from "next/router";
 import { useState, useEffect, ReactNode } from "react";
@@ -279,7 +280,7 @@ function Form() {
             <br />
             نظرات شما نقش مهمی در بهبود سرور مونگوکرفت خواهد داشت.
           </p>
-          <button
+          <Button
             onClick={() => {
                 router.push("/");
             //   setSubmitted(false);
@@ -289,10 +290,11 @@ function Form() {
             //     steps: survey.steps.map(step => ({ ...step, pickedOption: undefined })),
             //   });
             }}
-            className="px-6 py-3 bg-primary-600 text-zinc-900 rounded-lg hover:bg-primary-700 transition-colors"
+            variant="primary"
+            className="px-6 py-3 rounded-lg transition-colors"
           >
             بازگشت
-          </button>
+          </Button>
         </div>
       ) : (
         <>
@@ -358,19 +360,19 @@ function Form() {
 
           <div className="flex justify-between items-center pt-6 border-t border-gray-200">
             <div className="flex space-x-3 space-x-reverse">
-              <button
+              <Button
                 onClick={handlePrev}
                 disabled={survey.currentStep === 0}
-                className={`duration-150 text-primary-100 px-6 py-1 rounded justify-items-end ${
+                className={`duration-150 text-gray-300 px-6 py-1 rounded justify-items-end ${
                   survey.currentStep === 0
                     ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                    : "bg-gray-400 text-gray-700 hover:bg-gray-500"
+                    : "bg-gray-400 text-gray-900 hover:bg-gray-500"
                 }`}
               >
                 ← قبلی
-              </button>
+              </Button>
               
-              <button
+              <Button
                 onClick={handleNext}
                 disabled={
                   survey.currentStep === survey.steps.length - 1 ||
@@ -380,25 +382,25 @@ function Form() {
                   survey.currentStep === survey.steps.length - 1 ||
                   currentQuestion.pickedOption === undefined
                     ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                    : "bg-primary-500 text-zinc-900 hover:bg-primary-400"
+                    : "bg-primary-500 text-primary-100 hover:bg-primary-400"
                 }`}
               >
                 بعدی →
-              </button>
+              </Button>
             </div>
 
             {survey.currentStep === survey.steps.length - 1 && (
-              <button
+              <Button
                 onClick={handleSubmit}
                 disabled={currentQuestion.pickedOption === undefined}
                 className={`duration-150 text-primary-100 px-6 py-1 rounded justify-items-end ${
                   currentQuestion.pickedOption === undefined
                     ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                    : "bg-primary-500 text-zinc-900 hover:bg-primary-400 shadow-lg"
+                    : "bg-primary-500 text-primary-100 hover:bg-primary-400 shadow-lg"
                 }`}
               >
                 ارسال نظرسنجی
-              </button>
+              </Button>
             )}
           </div>
 

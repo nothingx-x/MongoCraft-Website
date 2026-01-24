@@ -6,6 +6,7 @@ import logo from "@public/mongocraft.svg";
 import A from "@components/A";
 import { usePopup } from "./Popup";
 import ServerIpPopup from "./ServerIpPopup";
+import Button from "./Button";
 
 type Link = {
 	href: string;
@@ -42,8 +43,7 @@ export default function Menu({ header, links }: MenuProps) {
 			window.removeEventListener("scroll", handleScroll);
 		};
 	}, []);
-
-	// console.log("re-rendered menu");
+	
 	return (
 		<nav
 			className={`z-50 sticky top-0 border-b border-secondary-400/0 select-none duration-300 ${
@@ -96,12 +96,14 @@ export default function Menu({ header, links }: MenuProps) {
 					))}
 				</span>
 				<span className="hidden md:flex gap-8 flex-grow justify-end">
-					<button
+					<Button
 						onClick={openPopup}
-						className="type-header bg-primary-500 hover:bg-primary-400 duration-150 text-primary-100 px-6 py-1 rounded justify-items-end">
+						variant="primary"
+						size="sm"
+						className="type-header">
 						آدرس
 						<ArrowRightIcon className="w-5 h-5 inline-block align-middle" />
-					</button>
+					</Button>
 				</span>
 			</div>
 			

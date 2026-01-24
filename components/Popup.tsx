@@ -47,12 +47,10 @@ const Popup = () => {
 			}
 		};
 
-		// Add event listener when the popup is shown
 		if (value) {
 			window.addEventListener("keydown", handleEsc);
 		}
 
-		// Cleanup event listener to avoid memory leaks & duplicate handlers
 		return () => {
 			window.removeEventListener("keydown", handleEsc);
 		};

@@ -66,7 +66,7 @@ export default function Layout(props: { children?: React.ReactNode }) {
 					}
 				]}
 			/>
-				{/* <Bottombar header="منو" links={[]}/> */}
+				<Bottombar header="منو" links={[]}/>
 		</div>
 	);
 }
