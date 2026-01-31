@@ -10,9 +10,9 @@ const nextConfig = {
 	reactStrictMode: true,
 	swcMinify: true,
 	pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
-	rewrites: async () => {
-		return [{ source: "/wiki", destination: "/wiki/index" }];
-	}
+	// rewrites: async () => {
+	// 	return [{ source: "/wiki", destination: "/wiki/index", }];
+	// }
 };
 
 const withMDX = createMdx({
